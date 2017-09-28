@@ -3,41 +3,50 @@
 }
 body{
     font-family: "Roboto Light";
+    font-size: 16px;
+}
+.landing-page{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+}
+.navbar-light .navbar-brand{
+    color: #fcfcfc;
+    font-family: "Roboto Regular";
+    font-size:1.5em;
+    padding: 30px 0 0 30px;
+}
+.form-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 .heading-h1{
-    /*font-family: "Roboto Light";*/
     padding-top: 10%;
+    font-size: 6vw;
 }
-
 .blue{
     color: #1279be;
 }
 .facebook-sign{
     background-color: #1279be;
     color:#fff;
-    font-size: 1.5em;
-    /*font-family: "Roboto Light";*/
-    margin-top: 78px;
+    font-size: 1em;
     border-radius: 30px;
-    padding: 15px 40px;
 }
-/*.btn-round{
-    border-radius: 26px;
-}*/
 .p-text{
-    font-size: 1.5rem;
-    margin-top: 60px;
+    font-size: 1em;
 }
 .radio-box{
     color: #000;
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 30px;
-    font-size: 1.875em;
-    /*padding: 10px 40px;*/
+    font-size: 1em;
     margin-right: 4%;
 }
-
 .radio-box.focus{
     background-color: #1279be;
     color: #fff;
@@ -46,32 +55,77 @@ body{
 .radio-box.active{
     box-shadow: none;
 }
-.form-group{
-    margin-top: 1em;
-}
 .form-control{
     border: 0;
     border-bottom: 1px solid #000;
     border-radius: 0;
-    font-size: 2.244em;
+    font-size: 1em;
     color: #000;
     padding-left: 0;
 }
 .form-check-label{
-    font-size: 1.5em;
+    font-size: 0.8em;
 }
 input[type=checkbox]{
-    width: 27px;
-    height: 27px;
-}
-.form-check-input {
-    /*padding: 20px;*/
+    width: 20px;
+    height: 20px;
 }
 .sign-up-btn{
     background-color: #1279be;
     color:#fff;
-    font-size: 1.875em;
-    margin-top: 2em;
+    font-size: 1em;
     border-radius: 40px;
-    padding: 12px 69px;
+    margin-bottom: 10%;
+}
+/*******
+Media Queries
+********/
+
+@media (min-width: 576px) {
+    .facebook-sign{
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .img-left {
+        background-image: url('../images/landing-img.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .heading-h1{
+        padding-top: 10%;
+        font-size: 3.1vw;
+    }
+    .facebook-sign{
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .facebook-sign{
+        font-size: 1.3vw;
+    }
+    .heading-h1{
+        padding-top: 10%;
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .heading-h1{
+        padding-top: 20%;
+        font-size: 2.5vw;
+    }
+    .facebook-sign{
+        font-size: 1vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .img-left nav,
+    .img-left img{
+        display: none;
+    }
+
 }

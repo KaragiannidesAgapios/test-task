@@ -1,54 +1,64 @@
 ---
 layout: default
 ---
-<div class="container-fluid">
+<div class="container-fluid landing-page">
     <div class="row">
-        <div class="col-sm-12">
-            <h1 class="heading-h1">Sign up to <br><span class="blue">the flight sharing community</span></h1>
+        <div class="col-lg-6 col-md-6 img-left p-0">
+            <nav class="navbar navbar-light ">
+              <a class="navbar-brand white" href="#">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  Homepage
+              </a>
+            </nav>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-7 col-7">
-            <button class="btn facebook-sign btn-round" type="button" name="button">
-                <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                Sign up with Facebook
-            </button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-12">
-            <p class="p-text">You are</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-12">
-            <form class="" action="index.html" method="post">
-                <div class=" form-group" data-toggle="buttons">
-                  <label class="btn radio-box col-sm-4 col-4">
-                    <input type="radio" name="pilot" value="pilot" id="pilot"> I'm pilot
-                  </label>
-                  <label class="btn radio-box col-sm-5 col-5">
-                    <input type="radio" name="passenger" value="passenger" id="passenger"> I'm passenger
-                  </label>
+        <div class="col-lg-6 col-md-6 p-0">
+            <div class="mx-auto col-lg-8 col-md-10 col-sm-10 col-10 form-side">
+                <div class="row">
+                    <div class=" col-sm-12">
+                        <h1 class="heading-h1 m-0">Sign up to Wingly,</h1>
+                        <h1 class="heading-h1 blue p-0">the flight sharing community</h1>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="name" class="form-control col-12" id="inputName" aria-describedby="" placeholder="Dovydas Gutparakis">
+                <div class="row">
+                    <div class="col-sm-7 col-10">
+                        <button class="btn btn-block facebook-sign btn-round .show_hide" type="button" name="button" href="javascript:void(0);">
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                            Sign up with Facebook
+                        </button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="inputEmail" aria-describedby="" placeholder="Dovydas Gutparakis@gmail.com">
-                 </div>
-                 <div class="form-group">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input col-1">
-                  <div class="col-11">I hereby declare that I have read, accept and agree to the <a href="#" class="blue">Terms of Services</a></div>
-                </label>
-              </div>
-              <button type="submit" class="btn blue sign-up-btn pull-right">Sign up</button>
-            </form>
-
+                <div class="row">
+                    <div class="col-sm-12 col-12">
+                        <form class="" action="index.html" method="post">
+                            <p class="p-text m-0">You are</p>
+                            <div class=" form-group" data-toggle="buttons">
+                              <label class="btn radio-box col-sm-4 col-4">
+                                <input type="radio" name="pilot" value="pilot" id="pilot"> I'm pilot
+                              </label>
+                              <label class="btn radio-box col-sm-5 col-5">
+                                <input type="radio" name="passenger" value="passenger" id="passenger"> I'm passenger
+                              </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="name" class="form-control col-12" id="inputName" aria-describedby="" placeholder="Dovydas Gutparakis">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="inputEmail" aria-describedby="" placeholder="Dovydas Gutparakis@gmail.com">
+                             </div>
+                             <div class="form-group">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input col-1">
+                              <div class="col-10">I hereby declare that I have read, accept and agree to the <a href="#" class="blue">Terms of Services</a></div>
+                            </label>
+                          </div>
+                          <button type="submit" class="btn blue col-sm-5 sign-up-btn pull-right">Sign up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
