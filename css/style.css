@@ -1,0 +1,77 @@
+*{
+/*border: 1px solid #000;*/
+}
+body{
+    font-family: "Roboto Light";
+}
+.heading-h1{
+    /*font-family: "Roboto Light";*/
+    padding-top: 10%;
+}
+
+.blue{
+    color: #1279be;
+}
+.facebook-sign{
+    background-color: #1279be;
+    color:#fff;
+    font-size: 1.5em;
+    /*font-family: "Roboto Light";*/
+    margin-top: 78px;
+    border-radius: 30px;
+    padding: 15px 40px;
+}
+/*.btn-round{
+    border-radius: 26px;
+}*/
+.p-text{
+    font-size: 1.5rem;
+    margin-top: 60px;
+}
+.radio-box{
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 30px;
+    font-size: 1.875em;
+    /*padding: 10px 40px;*/
+    margin-right: 4%;
+}
+
+.radio-box.focus{
+    background-color: #1279be;
+    color: #fff;
+    border: none;
+}
+.radio-box.active{
+    box-shadow: none;
+}
+.form-group{
+    margin-top: 1em;
+}
+.form-control{
+    border: 0;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    font-size: 2.244em;
+    color: #000;
+    padding-left: 0;
+}
+.form-check-label{
+    font-size: 1.5em;
+}
+input[type=checkbox]{
+    width: 27px;
+    height: 27px;
+}
+.form-check-input {
+    /*padding: 20px;*/
+}
+.sign-up-btn{
+    background-color: #1279be;
+    color:#fff;
+    font-size: 1.875em;
+    margin-top: 2em;
+    border-radius: 40px;
+    padding: 12px 69px;
+}

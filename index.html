@@ -1,11 +1,54 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>test task</title>
-    </head>
-    <body>
-        <h1>hi wingly</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </body>
-</html>
+---
+layout: default
+---
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="heading-h1">Sign up to <br><span class="blue">the flight sharing community</span></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-7 col-7">
+            <button class="btn facebook-sign btn-round" type="button" name="button">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                Sign up with Facebook
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-12">
+            <p class="p-text">You are</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-12">
+            <form class="" action="index.html" method="post">
+                <div class=" form-group" data-toggle="buttons">
+                  <label class="btn radio-box col-sm-4 col-4">
+                    <input type="radio" name="pilot" value="pilot" id="pilot"> I'm pilot
+                  </label>
+                  <label class="btn radio-box col-sm-5 col-5">
+                    <input type="radio" name="passenger" value="passenger" id="passenger"> I'm passenger
+                  </label>
+                </div>
+                <div class="form-group">
+                    <input type="name" class="form-control col-12" id="inputName" aria-describedby="" placeholder="Dovydas Gutparakis">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="" placeholder="Dovydas Gutparakis@gmail.com">
+                 </div>
+                 <div class="form-group">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input col-1">
+                  <div class="col-11">I hereby declare that I have read, accept and agree to the <a href="#" class="blue">Terms of Services</a></div>
+                </label>
+              </div>
+              <button type="submit" class="btn blue sign-up-btn pull-right">Sign up</button>
+            </form>
+
+        </div>
+    </div>
+</div>

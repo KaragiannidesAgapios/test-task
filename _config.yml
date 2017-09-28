@@ -1,0 +1,3 @@
+baseurl: /test-task
+
+exclude: ['README.md']
