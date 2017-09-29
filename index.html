@@ -21,7 +21,7 @@ layout: default
                 </div>
                 <div class="row">
                     <div class="col-sm-7 col-10">
-                        <button class="btn btn-block facebook-sign btn-round .show_hide" type="button" name="button" href="javascript:void(0);">
+                        <button id="fadeIn" class="btn btn-block facebook-sign btn-round " type="button" name="button">
                             <i class="fa fa-facebook-square" aria-hidden="true"></i>
                             Sign up with Facebook
                         </button>
@@ -31,33 +31,74 @@ layout: default
                     <div class="col-sm-12 col-12">
                         <form class="" action="index.html" method="post">
                             <p class="p-text m-0">You are</p>
-                            <div class=" form-group" data-toggle="buttons">
+                            <div id="radioBox"class="form-check" data-toggle="buttons">
                               <label class="btn radio-box col-sm-4 col-4">
-                                <input type="radio" name="pilot" value="pilot" id="pilot"> I'm pilot
+                                <input type="radio" name="radio" value="pilot" id="pilot" checked> I'm pilot
                               </label>
                               <label class="btn radio-box col-sm-5 col-5">
-                                <input type="radio" name="passenger" value="passenger" id="passenger"> I'm passenger
+                                <input type="radio" name="radio" value="passenger" id="passenger"> I'm passenger
                               </label>
+                              <span class="pull-right span-checks">
+                                  <span id="checkSuccessRadio" class="blue checkSuccess"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                  <span id="checkErrorRadio" class="red checkError"><i class="fa fa-times" aria-hidden="true"></i></span>
+                              </span>
                             </div>
-                            <div class="form-group">
-                                <input type="name" class="form-control col-12" id="inputName" aria-describedby="" placeholder="Dovydas Gutparakis">
+                            <div class="form-row ">
+                                <input type="name" class="form-control col-11" id="inputName" aria-describedby="" placeholder="Dovydas Gutparakis">
+                                <span class="span-checks">
+                                    <span id="checkSuccessName" class="blue checkSuccessName"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span id="checkErrorName" class="red "><i class="fa fa-times" aria-hidden="true"></i></span>
+                                </span>
                             </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="inputEmail" aria-describedby="" placeholder="Dovydas Gutparakis@gmail.com">
+                            <div class="form-row">
+                                <input type="email" class="form-control col-11" id="inputEmail" aria-describedby="" placeholder="Dovydas_Gutparakis@gmail.com">
+                                <span class="span-checks ">
+                                    <span id="checkSuccessMail" class="blue checkSuccess"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span id="checkErrorMail" class="red checkError"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                </span>
                              </div>
-                             <div class="form-group">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                             <div class="form-row">
+                                <input type="password" class="form-control col-11" id="inputPassword" placeholder="Password">
+                                <span class="span-checks">
+                                    <span id="checkSuccessPassword" class="blue checkSuccess"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span id="checkErrorPassword" class="red checkError"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                </span>
                           </div>
                           <div class="form-check">
-                            <label class="form-check-label">
-                              <input type="checkbox" class="form-check-input col-1">
-                              <div class="col-10">I hereby declare that I have read, accept and agree to the <a href="#" class="blue">Terms of Services</a></div>
+                            <label class="form-check-label ">
+                              <input id="inputCheckBox" type="checkbox" class="form-check-input">
+                              <div class=" p-0 m-0">
+                                  <div class="">
+                                      I hereby declare that I have read, accept and agree to the
+                                      <a href="#" class="blue">Terms of Services</a>
+                                  </div>
+                              </div>
+                              <span class="span-checks col-2">
+                                  <span id="checkSuccessPassword" class="blue checkSuccess"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                  <span id="checkErrorPassword" class="red checkError"><i class="fa fa-times" aria-hidden="true"></i></span>
+                              </span>
                             </label>
                           </div>
-                          <button type="submit" class="btn blue col-sm-5 sign-up-btn pull-right">Sign up</button>
+                          <button type="submit" class="btn blue col-4 col-sm-5 pull-right sign-up-btn">Sign up</button>
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="overlay-screen">
+            <div class=" container p-0">
+                    <div class="row">
+                        <div class="col-10 col-sm-10 col-md-10 col-lg-8 mx-auto welcome-text">
+                            <h1 class="welcome-heading blue p-0 m-0">Welcome aboard,</h1>
+                            <h1 class="welcome-heading p-0">who are you going to be in Wingly?</h1>
+                        </div>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-10 col-sm-10 col-md-10 col-lg-8 mx-auto buttons-row">
+                            <button class="overlay-buttons btn btn-lg col-8 col-sm-4" type="button" name="button"><i class="fa fa-paper-plane" aria-hidden="true"></i> I'm a Pilot</button>
+                            <button class="overlay-buttons btn btn-lg col-8 col-sm-4" type="button" name="button"><i class="fa fa-user" aria-hidden="true"></i> I'm a Passenger</button>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
