@@ -40,77 +40,119 @@
                 $("#checkErrorPassword").hide();
                 $("#checkSuccessRadio").hide();
                 $("#checkErrorRadio").hide();
-            });
+                $("#checkSuccessAgree").hide();
+                $("#checkErrorAgree").hide();
 
-            var errorRadioBox = false;
-            var errorName = false;
-            var errorEmail = false;
-            var errorPassword = false;
 
-            // $(".radio-box").click(function(){
-            //     $(this).focusout(function(){
-            //         $(this).addClass('focus', 'active');
-            //     });
-            // });
-            $("#radioBox").focusout(function (){
-                checkRadioBox();
-            });
+                var errorRadioBox = false;
+                var errorName = false;
+                var errorEmail = false;
+                var errorPassword = false;
+                var errorCheckAgree = false;
 
-            $("#inputName").focusout(function (){
-                checkName();
-            });
+                $("#radioBox").focusout(function (){
+                    checkRadioBox();
+                });
 
-            $("#inputEmail").focusout(function (){
-                checkEmail();
+                $("#inputName").focusout(function (){
+                    checkName();
+                });
 
-            });
-            $("#inputPassword").focusout(function (){
-                checkPassword();
-            });
+                $("#inputEmail").focusout(function (){
+                    checkEmail();
 
-            function checkName() {
-                var nameLength = $("#inputName").val().length;
+                });
+                $("#inputPassword").focusout(function (){
+                    checkPassword();
+                });
+                $("#inputCheckBox").focusout(function() {
+                    checkCheckBox();
+                });
 
-                if(nameLength < 6 || nameLength > 25){
-                    $("#checkErrorName").show();
-                } else {
-                    $("#checkErrorName").hide();
-                    $("#checkSuccessName").show();
+                function checkName() {
+                    var nameLength = $("#inputName").val().length;
+
+                    if(nameLength < 6 || nameLength > 25){
+                        $("#checkErrorName").show();
+                        $("#checkSuccessName").hide();
+                        errorName = true;
+                    } else {
+                        $("#checkErrorName").hide();
+                        $("#checkSuccessName").show();
+                    }
+                };
+                function checkPassword(){
+                    var passwordLength = $("#inputPassword").val().length;
+
+                    if(passwordLength < 8){
+                        $("#checkErrorPassword").show();
+                        $("#checkSuccessPassword").hide();
+                        errorPassword = true;
+                    } else {
+                        $("#checkErrorPassword").hide();
+                        $("#checkSuccessPassword").show();
+                    }
+                };
+                function checkRadioBox(){
+                    var radioBoxChoice = $('input[name=radio]:checked');
+
+                    if (radioBoxChoice.length == 0){
+                        $("#checkSuccessRadio").hide();
+                        $("#checkErrorRadio").show();
+                        errorRadioBox = true;
+                    } else {
+                        $("#checkErrorRadio").hide();
+                        $("#checkSuccessRadio").show();
+                    }
+                };
+
+                function checkEmail() {
+                    var pattern = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
+                    if (pattern.test($("#inputEmail").val())){
+                        $("#checkSuccessMail").show();
+                        $("#checkErrorMail").hide();
+                    } else {
+                        $("#checkErrorMail").show();
+                        $("#checkSuccessMail").hide();
+                        errorEmail = true;
+                    }
+                };
+
+                function checkCheckBox() {
+                    if ($("#inputCheckBox").is(":checked")) {
+                        $("#checkErrorAgree").hide();
+                        $("#checkSuccessAgree").show();
+                    } else {
+                        $("#checkErrorAgree").show();
+                        $("#checkSuccessAgree").hide();
+                        errorCheckAgree = true;
+                    }
                 }
-            };
-            function checkPassword(){
-                var passwordLength = $("#inputPassword").val().length;
 
-                if(passwordLength < 8){
-                    $("#checkErrorPassword").show();
-                } else {
-                    $("#checkErrorPassword").hide();
-                    $("#checkSuccessPassword").show();
-                }
-            };
-            function checkRadioBox(){
-                var radioBoxChoice = $('input[name=radio]:checked');
-                if (radioBoxChoice.length == 0){
-                    $("#checkErrorRadio").show();
-                } else if(radioBoxChoice.length == 1) {
-                    $("#checkSuccessRadio").show();
-                    $("#checkErrorRadio").hide();
-                } else {
-                    $("#checkSuccessRadio").hide();
-                    $("#checkErrorRadio").show();
-                }
-            };
+                $("#signUpForm").submit(function(event) {
+                    errorRadioBox = false;
+                    errorName = false;
+                    errorEmail = false;
+                    errorPassword = false;
+                    errorCheckAgree = false;
 
-            function checkEmail() {
-                var pattern = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+                    checkRadioBox();
+                    checkName();
+                    checkEmail();
+                    checkPassword();
+                    checkCheckBox();
 
-                if (pattern.test($("#inputEmail").val())){
-                    $("#checkSuccessMail").show();
-                } else {
-                    $("#checkSuccessMail").hide();
-                    $("#checkErrorMail").show();
-                }
-            };
+
+                    if(errorRadioBox == false && errorName == false && errorEmail == false && errorPassword == false && errorCheckAgree == false){
+                          event.preventDefault(); // comment or delete if you want sumbit to work.
+                          console.log($('form').serialize());
+                    } else {
+                        alert("Please fill in the form and then click 'Sign up'");
+                        return false;
+                    }
+                });
+            });
         </script>
 
     </body>

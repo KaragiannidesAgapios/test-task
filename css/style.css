@@ -16,8 +16,8 @@ body{
 .navbar-light .navbar-brand{
     color: #fcfcfc;
     font-family: "Roboto Regular";
-    font-size:1.5em;
-    padding: 3% 0 0 2%;
+    font-size:1.5vw;
+    padding: 2% 0 0 2%;
 }
 .form-side{
     display: flex;
@@ -27,8 +27,11 @@ body{
     background-color: #fcfcfc
 }
 .heading-h1{
-    padding-top: 10%;
+    padding-top: 15%;
     font-size: 6vw;
+}
+.bg-color{
+    background-color: #fcfcfc;
 }
 .blue{
     color: #1279be;
@@ -42,6 +45,7 @@ body{
 .span-checks span{
     left: -30px;
     position: relative;
+    font-size: 16px;
 }
 .form-row input,
 .form-row{
@@ -51,18 +55,18 @@ body{
 .facebook-sign{
     background-color: #1279be;
     color:#fff;
-    font-size: 1em;
+    font-size: 0.8em;
     border-radius: 30px;
 }
 .p-text{
-    font-size: 1em;
+    font-size: 0.6em;
 }
 .radio-box{
     color: #000;
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 30px;
-    font-size: 1em;
+    font-size: 0.9em;
     margin-right: 4%;
 }
 .radio-box.focus{
@@ -72,6 +76,9 @@ body{
 }
 .radio-box.active{
     box-shadow: none;
+    background-color: #1279be;
+    color: #fff;
+    border: none;
 }
 .form-control{
     border: 0;
@@ -96,7 +103,7 @@ input[type="checkbox" i]{
     color:#fff;
     font-size: 0.8em;
     border-radius: 40px;
-    margin-bottom: 10%;
+    margin-bottom: 7.8%;
     margin-top: 1.5em;
 }
 
@@ -130,7 +137,9 @@ Overlay Screen
     font-size: 1em;
     border-radius: 25px;
 }
-
+.img-left nav{
+    display: none;
+}
 /*******
 Media Queries
 ********/
@@ -145,9 +154,32 @@ Media Queries
         justify-content: space-between;
         margin-top: 0;
     }
+    .heading-h1{
+        padding-top: 10%;
+        font-size: 2.48vw;
+    }
+    .facebook-sign{
+        font-size: 1.25vw;
+    }
+    .p-text{
+        font-size: 0.95vw;
+        padding-bottom: 1vw;
+    }
+    .radio-box{
+        font-size: 1.53vw;
+    }
+    .form-control{
+        font-size: 1.8vw;
+    }
+    .form-check-label{
+        font-size: 1.25vw;
+    }
 }
 
 @media (min-width: 768px) {
+    .img-left nav{
+        display: block;
+    }
     .img-left {
         background-image: url('../images/landing-img.png');
         background-size: cover;
@@ -155,44 +187,37 @@ Media Queries
     }
     .heading-h1{
         padding-top: 10%;
-        font-size: 3.1vw;
+        font-size: 2.48vw;
     }
     .facebook-sign{
-        font-size: 1.5vw;
+        font-size: 1.25vw;
+    }
+    .p-text{
+        font-size: 0.95vw;
+        padding-bottom: 1vw;
+    }
+    .radio-box{
+        font-size: 1.53vw;
+    }
+    .sign-up-btn{
+        margin-bottom: 10%;
+    }
+    .form-control{
+        font-size: 1.8vw;
+    }
+    .form-check-label{
+        font-size: 1.25vw;
     }
     .welcome-heading{
         font-size: 4vw;
     }
+
 }
 
 @media (min-width: 992px) {
-    .facebook-sign{
-        font-size: 1.8vw;
-    }
-    .heading-h1{
-        padding-top: 20%;
-        font-size: 2.5vw;
-    }
-    .sign-up-btn{
-        margin-bottom: 20%;
-    }
+
     .welcome-heading{
         font-size: 3vw;
     }
-}
 
-@media (min-width: 1200px) {
-    .heading-h1{
-        font-size: 2.5vw;
-    }
-    .facebook-sign{
-        font-size: 1vw;
-    }
-}
-
-@media (max-width: 767px) {
-    .img-left nav,
-    .img-left img{
-        display: none;
-    }
 }

@@ -7,11 +7,11 @@ layout: default
             <nav class="navbar navbar-light ">
               <a class="navbar-brand white" href="#">
                   <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  Homepage
+                    Homepage
               </a>
             </nav>
         </div>
-        <div class="col-lg-6 col-md-6 p-0">
+        <div class="col-lg-6 col-md-6 p-0 bg-color">
             <div class="mx-auto col-lg-8 col-md-10 col-sm-10 col-10 form-side">
                 <div class="row">
                     <div class=" col-sm-12">
@@ -20,7 +20,7 @@ layout: default
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-7 col-10">
+                    <div class="col-sm-7 col-8">
                         <button id="fadeIn" class="btn btn-block facebook-sign btn-round " type="button" name="button">
                             <i class="fa fa-facebook-square" aria-hidden="true"></i>
                             Sign up with Facebook
@@ -29,11 +29,11 @@ layout: default
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-12">
-                        <form class="" action="index.html" method="post">
+                        <form id="signUpForm"class="" action="index.html" method="post">
                             <p class="p-text m-0">You are</p>
                             <div id="radioBox"class="form-check" data-toggle="buttons">
                               <label class="btn radio-box col-sm-4 col-4">
-                                <input type="radio" name="radio" value="pilot" id="pilot" checked> I'm pilot
+                                <input type="radio" name="radio" value="pilot" id="pilot"> I'm pilot
                               </label>
                               <label class="btn radio-box col-sm-5 col-5">
                                 <input type="radio" name="radio" value="passenger" id="passenger"> I'm passenger
@@ -44,42 +44,42 @@ layout: default
                               </span>
                             </div>
                             <div class="form-row ">
-                                <input type="name" class="form-control col-11" id="inputName" aria-describedby="" placeholder="Dovydas Gutparakis">
+                                <input type="text" class="form-control col-11" name="name" id="inputName" aria-describedby="" placeholder="Dovydas Gutparakis" value="">
                                 <span class="span-checks">
                                     <span id="checkSuccessName" class="blue checkSuccessName"><i class="fa fa-check" aria-hidden="true"></i></span>
                                     <span id="checkErrorName" class="red "><i class="fa fa-times" aria-hidden="true"></i></span>
                                 </span>
                             </div>
                             <div class="form-row">
-                                <input type="email" class="form-control col-11" id="inputEmail" aria-describedby="" placeholder="Dovydas_Gutparakis@gmail.com">
+                                <input type="email" class="form-control col-11" name="email" id="inputEmail" aria-describedby="" placeholder="Dovydas_Gutparakis@gmail.com" value="">
                                 <span class="span-checks ">
                                     <span id="checkSuccessMail" class="blue checkSuccess"><i class="fa fa-check" aria-hidden="true"></i></span>
                                     <span id="checkErrorMail" class="red checkError"><i class="fa fa-times" aria-hidden="true"></i></span>
                                 </span>
                              </div>
                              <div class="form-row">
-                                <input type="password" class="form-control col-11" id="inputPassword" placeholder="Password">
+                                <input type="password" name="password" class="form-control col-11" id="inputPassword" placeholder="Password">
                                 <span class="span-checks">
                                     <span id="checkSuccessPassword" class="blue checkSuccess"><i class="fa fa-check" aria-hidden="true"></i></span>
                                     <span id="checkErrorPassword" class="red checkError"><i class="fa fa-times" aria-hidden="true"></i></span>
                                 </span>
                           </div>
-                          <div class="form-check">
-                            <label class="form-check-label ">
-                              <input id="inputCheckBox" type="checkbox" class="form-check-input">
-                              <div class=" p-0 m-0">
-                                  <div class="">
+                          <div class="form-row d-flex flex-row">
+                            <label class="form-check-label">
+                              <input id="inputCheckBox" name="inputCheckBox" type="checkbox" class="form-check-input">
+                              <div class="d-flex flex-row">
+                                  <span class="col-10">
                                       I hereby declare that I have read, accept and agree to the
                                       <a href="#" class="blue">Terms of Services</a>
-                                  </div>
+                                  </span>
+                                  <span class="col-1 offset-1">
+                                      <span id="checkSuccessAgree" class="blue checkSuccess"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                      <span id="checkErrorAgree" class="red checkError"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                  </span>
                               </div>
-                              <span class="span-checks col-2">
-                                  <span id="checkSuccessPassword" class="blue checkSuccess"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                  <span id="checkErrorPassword" class="red checkError"><i class="fa fa-times" aria-hidden="true"></i></span>
-                              </span>
                             </label>
                           </div>
-                          <button type="submit" class="btn blue col-4 col-sm-5 pull-right sign-up-btn">Sign up</button>
+                          <button id="signUpBtn" type="submit" class="btn blue col-4 col-sm-5 pull-right sign-up-btn" value="submit">Sign up</button>
                         </form>
                     </div>
                 </div>
