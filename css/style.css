@@ -43,14 +43,16 @@ body{
     display: inherit;
 }
 .span-checks {
-    left: 93%;
+    left: 91%;
     position: absolute;
     bottom: 5px;
+    font-size: 14px;
 }
 #radioBox .span-checks{
     bottom: 15px;
-    left: 93%;
-    position: absolute;
+}
+#inputCheckBox .span-checks{
+    bottom: 10px;
 }
 .form-row input,
 .form-row{
@@ -90,7 +92,7 @@ body{
     border: 0;
     border-bottom: 1px solid #000;
     border-radius: 0;
-    font-size: 1em;
+    font-size: 0.8em;
     color: #000;
     padding-left: 0;
 }
@@ -192,7 +194,6 @@ Media Queries
         background-repeat: no-repeat;
     }
     .heading-h1{
-        padding-top: 10%;
         font-size: 2.48vw;
     }
     .facebook-sign{
@@ -207,9 +208,10 @@ Media Queries
     }
     .sign-up-btn{
         margin-bottom: 10%;
+        font-size: 1.55vw;
     }
     .form-control{
-        font-size: 1.8vw;
+        font-size: 1.7vw;
     }
     .form-check-label{
         font-size: 1.25vw;
@@ -221,7 +223,6 @@ Media Queries
 }
 
 @media (min-width: 992px) {
-
     .welcome-heading{
         font-size: 3vw;
     }
