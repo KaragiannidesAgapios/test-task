@@ -15,7 +15,7 @@ body{
 }
 .navbar-light .navbar-brand{
     color: #fcfcfc;
-    font-family: "Roboto Regular";
+    font-family: "Roboto";
     font-size:1.5vw;
     padding: 2% 0 0 2%;
 }
@@ -101,10 +101,17 @@ body{
 }
 
 input[type=checkbox]{
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
-input[type="checkbox" i]{
+.agree-terms-row{
+    display: flex;
+    flex-direction: row;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+}
+.agree-declaration{
+    width: 90%;
 }
 .sign-up-btn{
     background-color: #1279be;
@@ -121,7 +128,7 @@ Overlay Screen
 .overlay-screen{
     background-color: #fff;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 10;
     display: none;
     position: absolute;
@@ -131,7 +138,7 @@ Overlay Screen
     font-size: 6vw;
 }
 .welcome-text{
-    margin-top: 10%;
+    margin-top: 15vh;
 }
 .buttons-row {
     margin-top: 20%;
@@ -192,6 +199,7 @@ Media Queries
         background-image: url('../images/landing-img.png');
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: 25% 60% ;
     }
     .heading-h1{
         font-size: 2.48vw;
@@ -215,6 +223,9 @@ Media Queries
     }
     .form-check-label{
         font-size: 1.25vw;
+    }
+    .agree-declaration{
+        width: 25vw;
     }
     .welcome-heading{
         font-size: 4vw;
