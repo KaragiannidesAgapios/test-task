@@ -2,7 +2,7 @@
 /*border: 1px solid #000;*/
 }
 body{
-    font-family: "Roboto Light";
+    font-family: 'Roboto Light', sans-serif;
     font-size: 16px;
 }
 .landing-page{
@@ -42,10 +42,15 @@ body{
 .form-row span{
     display: inherit;
 }
-.span-checks span{
-    left: -30px;
-    position: relative;
-    font-size: 16px;
+.span-checks {
+    left: 93%;
+    position: absolute;
+    bottom: 5px;
+}
+#radioBox .span-checks{
+    bottom: 15px;
+    left: 93%;
+    position: absolute;
 }
 .form-row input,
 .form-row{
@@ -68,6 +73,7 @@ body{
     border-radius: 30px;
     font-size: 0.9em;
     margin-right: 4%;
+    margin-left: auto;
 }
 .radio-box.focus{
     background-color: #1279be;
