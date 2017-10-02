@@ -9,9 +9,6 @@ body{
     background-color: #fcfcfc;
 }
 
-.landing-page{
-    padding: 0;
-}
 .navbar-light .navbar-brand{
     color: #fcfcfc;
     font-family: "Roboto";
@@ -22,22 +19,18 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 90vh;
-    background-color: #fcfcfc;
-    overflow: hidden;
+    height: 100vh;
 }
 .heading-h1{
     padding-top: 10%;
     font-size: 6vw;
 }
-.bg-color{
-    background-color: #fcfcfc;
-}
+
 .blue{
     color: #1279be;
 }
 .red{
-    color: red;
+    color: #f00;
 }
 .form-row span{
     display: inherit;
