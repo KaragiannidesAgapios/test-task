@@ -47,10 +47,6 @@ body{
 #inputCheckBox .span-checks{
     bottom: 10px;
 }
-/*.form-row input,
-.form-row{
-    display: inline;
-}*/
 
 .facebook-sign{
     background-color: #1279be;
@@ -122,6 +118,7 @@ Overlay Screen
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
 }
 .welcome-heading{
     font-size: 6vw;
