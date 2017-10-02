@@ -25,7 +25,7 @@
 
         <script type="text/javascript">
             $(document).ready(function(){
-                $("#fadeIn").click(function(){
+                $("#fadeIn").on('click touchstart', function(){
                     $(".overlay-screen").fadeIn(1500);
                     console.log("working");
                 });
