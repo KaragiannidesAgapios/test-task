@@ -5,8 +5,6 @@ html{
     height: 100%;
     width:100%;
     overflow: hidden;
-
-
     position:fixed;
     top:0px;
     bottom:0px;
@@ -37,8 +35,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
-    background-color: #fcfcfc
+    height: 90vh;
+    background-color: #fcfcfc;
     overflow: hidden;
 }
 .heading-h1{
@@ -176,6 +174,9 @@ Media Queries
 ********/
 
 @media (min-width: 576px) {
+    .form-side{
+        height: 100vh;
+    }
     .facebook-sign{
         font-size: 1.2em;
     }
