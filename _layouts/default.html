@@ -26,8 +26,8 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $(".overlay-screen").hide();
-                
-                $("#fadeIn").on('click touchstart', function(){
+
+                $("#fadeIn").bind("click touchstart", function(){
                     $(".overlay-screen").fadeIn(1500);
                     console.log("working");
                 });
@@ -94,7 +94,7 @@
                     }
                 };
                 function checkRadioBox(){
-                    var radioBoxChoice = $('input[name=radio]:checked');
+                    var radioBoxChoice = $("input[name=radio]:checked");
 
                     if (radioBoxChoice.length == 0){
                         $("#checkSuccessRadio").hide();
@@ -146,7 +146,7 @@
 
                     if(errorRadioBox == false && errorName == false && errorEmail == false && errorPassword == false && errorCheckAgree == false){
                           event.preventDefault(); // comment or delete if you want sumbit to work.
-                          console.log($('form').serialize());
+                          console.log($("form").serialize());
                     } else {
                         alert("Please fill in the form and then click 'Sign up'");
                         return false;
